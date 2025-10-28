@@ -173,7 +173,6 @@ def main_worker(gpu, args):
         best_file_name='{}/checkpoint_best.pth.tar'.format(args.exp_dir))
 
 def train(train_loader, confidence,model, loss_fn, loss_cont_fn,loss_cont_fn_c,optimizer, epoch, args, tb_logger):
-    #定义可以更新的变量
     batch_time = AverageMeter('Time', ':1.2f')
     data_time = AverageMeter('Data', ':1.2f')
     acc_cls = AverageMeter('Acc@Cls', ':2.2f')
